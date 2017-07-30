@@ -22,6 +22,7 @@ header a{
 
 .content {
   margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 html {
@@ -61,13 +62,12 @@ background: url(/photos/MPD_0304.jpg) no-repeat center center fixed;
 }
 
 .input-field label:not(.label-icon).active {
-    font-size: 1.7rem;
-    font-weight: 700;
+    font-size: 1.4rem;
     color: black;
 }
 
 .input-field {
-  top: 5px;
+  top: 20px;
   left: 37px;
 }
 
@@ -144,4 +144,13 @@ background: url(/photos/MPD_0304.jpg) no-repeat center center fixed;
   letter-spacing: 10px;
   font-size: 35px;
   margin: 0px;
+}
+
+.buttonContainer {
+    width: 300px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }

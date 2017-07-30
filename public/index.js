@@ -6,8 +6,6 @@
     let intvID;
     let breakIntvID;
 
-console.log(breakTime)
-
  $('#session').change( () => { 
     minutes = document.getElementById('session').value;
    seconds = 0;
@@ -22,7 +20,9 @@ console.log(breakTime)
 
 function toggleTimer() {
   
-  console.log(timer.classList)
+  $('.buttonContainer').html(`<a class="waves-effect waves-light btn" onClick = "reset()">Reset</a>`)
+  
+
   if ($(timer).hasClass('active')){
     timer.classList.toggle('active');
     stopTimer();
@@ -61,6 +61,7 @@ function startTimer(){
 }
 
 function startBreak(){
+  $('.buttonContainer').html(`<a class="waves-effect waves-light btn" onClick = "toggleSound()">Stop Alarm</a><a class="waves-effect waves-light btn" onClick = "reset()">Reset</a>`)
   breakIntvID = window.setInterval(breakTimer, 1000);
 }
 
@@ -80,6 +81,9 @@ function timerActivate(){
     if (minutes == 0 && seconds == 0){
     toggleSound();
     stopTimer();
+      timer.classList.toggle('active');
+      timer.classList.toggle('break');
+      timer.classList.toggle('breakActive')
     setTimeout(function(){ startBreak() }, 2000);
   }
 }
@@ -116,11 +120,17 @@ function toggleSound() {
     } else {
         sound.play();
         sound.classList.toggle('playing');
-            $('.buttonContainer').html(`<a class="waves-effect waves-light btn" onClick = "toggleSound()">Stop Alarm</a>`)
+            $('.buttonContainer').html(`<a class="waves-effect waves-light btn" onClick = "toggleSound()">Stop Alarm</a>
+              <a class="waves-effect waves-light btn" onClick = "reset()">Reset</a>`)
     }
 }
 
 function reset () {
+  stopTimer();
+  stopBreak();
+  minutes = document.getElementById('session').value;
+  seconds = 0;
+  breakTime = document.getElementById('break').value;
   $('#timer').html(`<p class ="timerText">Begin Session</p>`)
 }
 
