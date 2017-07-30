@@ -9,12 +9,32 @@
  $('#session').change( () => { 
     minutes = document.getElementById('session').value;
    seconds = 0;
+   if ($(timer).hasClass('active')) {
+    timer.classList.toggle('active')
+   }
+   if ($(timer).hasClass('break')) {
+    timer.classList.toggle('break')
+      if ($(timer).hasClass('breakActive')) {
+      timer.classList.toggle('breakActive')
+      stopBreak();
+     }
+   }
    stopTimer();
  })
 
  $('#break').change( () => { 
     breakTime = document.getElementById('break').value;
    seconds = 0;
+      if ($(timer).hasClass('active')) {
+    timer.classList.toggle('active')
+   }
+   if ($(timer).hasClass('break')) {
+    timer.classList.toggle('break')
+      if ($(timer).hasClass('breakActive')) {
+      timer.classList.toggle('breakActive')
+      stopBreak();
+     }
+   }
    stopTimer();
  })
 

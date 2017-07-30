@@ -151,6 +151,6 @@ background: url(/photos/MPD_0304.jpg) no-repeat center center fixed;
     margin-top: 20px;
     display: flex;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-between;
 }
