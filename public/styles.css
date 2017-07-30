@@ -32,7 +32,7 @@ background: url(/photos/MPD_0304.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 #session, #break {
-  height: 50px;
+  height: 63px;
   width: 70px;
   font-size: 30px;
   font-weight: 300;
@@ -61,13 +61,14 @@ background: url(/photos/MPD_0304.jpg) no-repeat center center fixed;
 }
 
 .input-field label:not(.label-icon).active {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
+    color: black;
 }
 
 .input-field {
-  top: 20px;
-  left:17px;
+  top: 5px;
+  left: 37px;
 }
 
 .timerContainer {
@@ -92,7 +93,7 @@ background: url(/photos/MPD_0304.jpg) no-repeat center center fixed;
 }
 
 .increase-timer {
-    width: 125px;
+    width: 161px;
     display: flex;
     flex-flow: row wrap;
     font-variant: small-caps;
