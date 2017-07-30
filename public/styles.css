@@ -147,10 +147,13 @@ background: url(/photos/MPD_0304.jpg) no-repeat center center fixed;
 }
 
 .buttonContainer {
-    width: 300px;
-    margin-top: 20px;
+    width: 500px;
     display: flex;
     align-items: center;
-    flex-flow: column wrap;
-    justify-content: space-between;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.buttonContainer a {
+  margin: 25px;
 }
