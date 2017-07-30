@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pomodoro Clock</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/materialize-css/dist/css/materialize.min.css">
+</head>
+<body>
+<div class = "container-fluid background">
+  <header>
+  <a href = "https://www.michaeldurfey.com">Michael Durfey</a>
+</header>
+  <div class = "row">
+      <div class = "container">
+      <section class = "content">
+        <h1 class ="headerText">Pomodoro</h1>
+        <div class = "timerContainer">
+          <div class = "input-fields">
+            <div class = "input-field increase-timer">
+              <input class = "validate" type = "number" id="session" value = "25" min = "1">
+          <label class = "active" for="session">Session Time</label>
+            </div><!--Input 1 End-->
+            <div class = "input-field increase-timer">
+              <input type = "number" id="break" value = "5" min = "1">
+              <label class = "active" for="break">Break Time</label>
+            </div><!--Input 2 End-->
+          </div> <!-- Input Fields End -->
+              <div class = "timer" id = "timer">
+
+             </div>
+              <audio id="audio" src="http://www.online-clockalarm.com/sounds/sound2.mp3" autostart="false" ></audio>
+          <div class = "buttonContainer"> </div>
+        </div> <!--TimerContainer End-->
+        </section>
+    </div> <!-- Container End -->
+  </div> <!-- Row End -->
+</div>
+<script type="text/javascript" src ="/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src ="/index.js"></script>
+</body>
+</html>
