@@ -14,11 +14,22 @@ console.log(breakTime)
    stopTimer();
  })
 
+
+
  $('#break').change( () => { 
     breakTime = document.getElementById('break').value;
    seconds = 0;
    stopTimer();
  })
+
+ function reset () {
+    stopTimer();
+    stopBreak();
+    minutes = document.getElementById('session').value;
+    seconds = 0;
+    breakTime = document.getElementById('break').value;
+    $('#timer').html(`<p class ="timerText">Begin Session</p>`)
+}
 
 function toggleTimer() {
   
@@ -124,15 +135,6 @@ function toggleSound() {
         sound.classList.toggle('playing');
             $('.buttonContainer').html(`<a class="waves-effect waves-light btn" onClick = "toggleSound()">Stop Alarm</a><a class="waves-effect waves-light btn" onClick = "reset()">Reset</a>`)
     }
-}
-
-function reset () {
-    stopTimer();
-    stopBreak();
-    minutes = document.getElementById('session').value;
-    seconds = 0;
-    breakTime = document.getElementById('break').value;
-    $('#timer').html(`<p class ="timerText">Begin Session</p>`)
 }
 
 $('#timer').on('click', () => {
