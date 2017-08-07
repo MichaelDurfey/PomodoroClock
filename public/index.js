@@ -1,4 +1,4 @@
-$(document).ready( () => {
+
     let minutes = document.getElementById('session').value;
     let seconds = 0;
     let breakTime = document.getElementById('break').value;
@@ -22,7 +22,7 @@ console.log(breakTime)
    stopTimer();
  })
 
- function reset () {
+ function reset(){
     stopTimer();
     stopBreak();
     minutes = document.getElementById('session').value;
@@ -144,4 +144,4 @@ $('#timer').on('click', () => {
 
 
   $('#timer').html(`<p class ="timerText">Begin Session</p>`)
-})
+
