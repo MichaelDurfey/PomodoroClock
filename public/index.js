@@ -1,4 +1,4 @@
-
+$(document).ready( () => {
     let minutes = document.getElementById('session').value;
     let seconds = 0;
     let breakTime = document.getElementById('break').value;
@@ -142,3 +142,4 @@ $('#timer').on('click', () => {
 
 
   $('#timer').html(`<p class ="timerText">Begin Session</p>`)
+})
